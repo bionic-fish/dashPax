@@ -1,0 +1,243 @@
+/* global props */
+* {
+    /* css reset */
+    margin: 0;
+    padding: 0;
+    /* css global */
+    color: #fff;
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+}
+.hidden {
+    visibility: hidden;
+}
+/* lists and forms */
+ul {
+ list-style-type: none;
+ text-align: left;   
+}
+li {
+    /* text-align: center; */
+    padding: 10px;
+    font-size: 0.5rem;
+}
+/* links & fonts */
+a {
+    text-decoration: none;
+    font-size: 0.5rem;
+}
+i {
+    color: #fff;
+    font-size: 30px;
+    padding: 14px;
+}
+/* images & backgrounds */
+img {
+    height: 180px;
+    width: 280px;
+    margin: auto;
+}
+.information {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    margin: 5%;
+}
+.info-content {
+    text-align: center;
+    margin: auto;
+}
+
+/* header properties */
+.header {
+    background-color: #000;
+}
+.header-flex {
+    display: flex;
+    flex-direction: column;
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    text-align: center;
+    padding: 0;
+}
+.header-panel {
+    margin: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* dash properties */
+.dashboard {
+    background-color: black;
+}
+.dash-grid {
+    padding: 25px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+}
+.dash-panel {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+/* dash content */
+.dash-content a {
+    font-size: 0.4rem;
+}
+
+.dash-content h2,
+.dash-content h3 {
+    font-size: 0.9rem;
+}
+
+.dash-content p,
+.dash-content h4,
+.dash-content h5 {
+    font-size: 0.5rem;
+}
+/* footer properties */
+.footer {
+    background-color: #000;
+    color: #fff;
+}
+.footer-grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+}
+.footer-panel {
+    display: flex;
+    border: 2px solid #fff;
+}
+
+.footer a {
+    color: #fff;
+    padding: 20px;
+    flex: 25%;
+}
+
+/* panel sizes */
+.panel-sml {
+    grid-column: span 1;
+    grid-row: span 1;
+    background: rgb(230,212,23);
+    background: linear-gradient(207deg, rgba(230,212,23,1) 49%, rgba(70,252,163,1) 98%); 
+}
+.panel-med {
+    grid-column: span 2;
+    grid-row: span 1;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.panel-lrg {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: rgb(98,212,12);
+    background: linear-gradient(180deg, rgba(98,212,12,1) 10%, rgba(12,132,212,1) 70%);
+}
+.panel-wide {
+    grid-column: span 4;
+    grid-row: span 1;
+    background: rgb(29,52,167);
+    background: linear-gradient(207deg, rgba(29,52,167,1) 17%, rgba(248,70,252,1) 71%);
+
+}
+/* heading props  */
+.dash-content h2 {font-size: 1rem;}
+/* panel content */
+.header-content,
+.dash-content,
+.footer-content {
+    /* padding: 10px; */
+    margin: auto;
+    text-align: center;
+}
+
+.dash-content a {
+    flex-direction: column;
+    padding: 2px;
+}
+/* font sizing desktop */
+h2 {font-size: 1rem;}
+h3 {font-size: 0.90rem;}
+h4 {font-size: 1rem;}
+h5 {font-size: 0.75rem;}
+h6 {font-size: 0.65rem;}
+p {font-size: 0.5rem;}
+
+/* media queries */
+/* media queries */
+    /* Apply Settings To Device Screens Under 800px In Width */
+@media only screen and (max-width: 800px) {
+    /* header props for mobile */
+    .header-panel {
+        margin: 0;
+    }
+    /* grid display for mobile */
+    .dash-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(250px, auto);
+    }
+    .header-grid,
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+    }
+    .grid-switch {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    i {
+        color: #fff;
+        font-size: 25px;
+    }
+
+    /* panel sizing for mobile */
+    .panel-lrg,
+    .panel-med,
+    .panel-sml,
+    .panel-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    /* image sizing for mobile */
+    img {
+        /* height: 100px; */
+        width: 150px;
+        margin: auto;
+    }
+
+    /* font sizing for mobile */
+    .header-content p,
+.header-content h2,
+.header-content h3,
+.dash-content h2,
+.dash-content h3,
+.footer-content p,
+.footer-content h2,
+.footer-content h3,
+.footer-content h5 {
+    font-size: 0.65rem;
+}
+.header-content p,
+.dash-content p,
+.footer-content p {
+    font-size: 0.5rem;
+    text-transform: capitalize;
+}
+
+.nodisplay{
+    /* visibility: collapse; */
+    display: none;
+}
+}
