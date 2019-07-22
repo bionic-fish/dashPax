@@ -74,8 +74,56 @@
         <!-- header panel end -->
     </div>
     <!-- header-grid end -->
+
+    <!-- mobile navigation -->
+    <div class="header-content">
+    <!-- section | overlay -->
+<!-- mobile device navigation elements -->
+    <!-- components :
+        [overlay],
+        [overlay-content],
+        [overlay btn],
+    -->
+<section class="overlay" id="mobileNav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- overlay content -->
+        <div class="overlay-content">
+            <i class="fas fa-home"></i>
+            <a href="#">Homepage</a>
+            
+            <i class="fas fa-chart-line"></i>
+            <a href="#">Dashboard</a>
+            
+            <i class="fas fa-user-plus"></i>
+            <a href="#">Register</a>
+            
+            <i class="fas fa-mobile"></i>
+            <a href="#">Application</a>
+        </div>
+        <!-- overlay content end -->
+</section>
+<!-- section | overlay end -->
+<span style="cursor: pointer" onclick="openNav()">&#9776;</span>
+</div>
+<!-- header content end -->
+
+
+    
 </header>
 <!-- header | header end -->
+
+
+
+<script>
+    function openNav() {
+        document.getElementById("mobileNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mobileNav").style.height = "0%";
+    }
+
+</script>
 
 <!-- section | dashboard -->
     <!-- components :

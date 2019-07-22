@@ -149,8 +149,46 @@ img {
     background: linear-gradient(207deg, rgba(29,52,167,1) 17%, rgba(248,70,252,1) 71%);
 
 }
-/* heading props  */
-.dash-content h2 {font-size: 1rem;}
+
+/* mobile menu properties */
+.overlay {
+    background-color: #000;
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a {
+    padding: 4px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+
+}
+.overlay a:hover,
+.overlay a:focus {
+    color: #666666;
+}
+.overlay closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 2rem;
+    color: #fff;
+}
 /* panel content */
 .header-content,
 .dash-content,
@@ -200,7 +238,14 @@ p {font-size: 0.5rem;}
         color: #fff;
         font-size: 25px;
     }
-
+    /* navigation for mobile */
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 16px;}
+    .overlay .closebtn {
+        font-size: 4rem;
+        top: 5px;
+        right: 35px;
+    }
     /* panel sizing for mobile */
     .panel-lrg,
     .panel-med,
@@ -215,6 +260,11 @@ p {font-size: 0.5rem;}
         /* height: 100px; */
         width: 150px;
         margin: auto;
+    }
+    span {
+        text-align: center;
+        margin: auto;
+        font-size: 0.9rem;
     }
 
     /* font sizing for mobile */
